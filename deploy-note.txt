@@ -1,0 +1,2 @@
+GitHub Pages will assemble site from site.b64.* parts on deploy.
+Drill URL: https://kota69py.github.io/claude-cert-guide-jp/drill.html
