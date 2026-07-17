@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>1問1答ドリル</title></head><body>
+<p style="font-family:system-ui;margin:2rem">読み込み中…</p>
+<script>
+(async () => {
+  const n = 16;
+  for (let i = 0; i < n; i++) {
+    await new Promise((res, rej) => {
+      const s = document.createElement('script');
+      s.src = 'part' + String(i).padStart(2,'0') + '.js';
+      s.onload = res; s.onerror = () => rej(new Error('part '+i));
+      document.head.appendChild(s);
+    });
+  }
+  const html = window.__P.join('');
+  document.open(); document.write(html); document.close();
+})().catch(e => { document.body.textContent = 'Load failed: ' + e; });
+</script>
+</body></html>
