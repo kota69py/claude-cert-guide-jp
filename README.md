@@ -23,5 +23,3 @@ python3 generate_drill.py   # drill.html
 
 - `drill.html` — スマホ向け4択ドリル（単体完結）
 - `index.html` — 全30タスク学習ガイド
-- `app.js` / `glossary.js` / `sw.js` — ガイド用
-- `content_d*.py` — コンテンツ正本

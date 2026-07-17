@@ -24,6 +24,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Assemble site from base64 parts (if present)
+        run: |
+          set -euo pipefail
+          if ls site.b64.* 1>/dev/null 2>&1; then
+            echo "Assembling site.tar.bz2 from site.b64.* parts..."
+            cat site.b64.* | base64 -d > site.tar.bz2
+            tar -xjf site.tar.bz2
+            rm -f site.tar.bz2
+            ls -la
+          else
+            echo "No site.b64 parts; using repo files as-is"
+          fi
+          # Ensure Pages does not run Jekyll
+          touch .nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
