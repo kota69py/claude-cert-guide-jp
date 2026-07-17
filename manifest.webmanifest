@@ -1,0 +1,18 @@
+{
+  "name": "Claude Certified Architect 学習ガイド",
+  "short_name": "CCA Guide",
+  "description": "Claude Certified Architect Foundations 日本語カリキュラム完全版",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f1419",
+  "theme_color": "#0f1419",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
